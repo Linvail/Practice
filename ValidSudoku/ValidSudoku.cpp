@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <set>
-#include <algorithm>
 
 using namespace std;
 
@@ -54,7 +52,8 @@ public:
 
     static bool isValidVector( const vector<char>& aData )
     {
-        set<char> uniqueSet;
+        // True means that character is occupied.
+        bool allowedChar[9] = { false };
         for( size_t i = 0; i < aData.size(); ++i )
         {
             if( aData[i] == '.' )
@@ -63,11 +62,48 @@ public:
             }
             else
             {
-                if( uniqueSet.find( aData[i] ) != uniqueSet.end() )
+                if( allowedChar[aData[i] - '1'] )
                 {
                     return false;
                 }
-                uniqueSet.insert( aData[i] );
+                allowedChar[aData[i] - '1'] = true;
+            }
+        }
+        return true;
+    }
+
+    static bool isValidSudoku2( vector<vector<char>>& board )
+    {
+        for( int i = 0; i < 9; i++ )
+        {
+            cout << "Starting next i\n";
+            bool rows[9] = { false };
+            bool cols[9] = { false };            
+            bool blocks[9] = { false };
+            for( int j = 0; j < 9; j++ )
+            {
+                if( board[i][j] != '.' )
+                {
+                    if( rows[board[i][j] - '1'] )
+                        return false;
+                    rows[board[i][j] - '1'] = true;
+                }
+                if( board[j][i] != '.' )
+                {
+                    if( cols[board[j][i] - '1'] )
+                        return false;
+                    cols[board[j][i] - '1'] = true;
+                }
+
+                cout << "Check board[" << ( i / 3 ) * 3 + j / 3 << "," << ( ( i % 3 ) * 3 ) + j % 3 << "]" <<
+                    board[( ( i / 3 ) * 3 + j / 3 )][( ( i % 3 ) * 3 ) + j % 3] << "\n";
+
+                if( board[( ( i / 3 ) * 3 + j / 3 )][( ( i % 3 ) * 3 ) + j % 3] != '.' )
+                {                    
+                    if( blocks[board[( ( i / 3 ) * 3 + j / 3 )][( ( i % 3 ) * 3 ) + j % 3] - '1'] )
+                        return false;
+                    blocks[board[( ( i / 3 ) * 3 + j / 3 )][( ( i % 3 ) * 3 ) + j % 3] - '1'] = true;
+                }
             }
         }
         return true;
@@ -88,5 +124,6 @@ int main()
         {'.','.','.','.','8','.','.','7','9'}
     };
 
-    cout << "isValidSudoku: " << Solution::isValidSudoku( testData ) << endl;
+    //cout << "isValidSudoku: " << Solution::isValidSudoku( testData ) << endl;
+    cout << "isValidSudoku: " << Solution::isValidSudoku2( testData ) << endl;
 }
