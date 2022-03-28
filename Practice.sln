@@ -17,6 +17,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ValidPalindrome", "ValidPal
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringToInteger", "StringToInteger\StringToInteger.vcxproj", "{25D97576-9481-416E-A979-E43426F1CA02}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImplementStrStr", "ImplementStrStr\ImplementStrStr.vcxproj", "{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LongestCommonPrefix", "LongestCommonPrefix\LongestCommonPrefix.vcxproj", "{65139D6D-A602-492D-859D-54DE264F04F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +85,22 @@ Global
 		{25D97576-9481-416E-A979-E43426F1CA02}.Release|x64.Build.0 = Release|x64
 		{25D97576-9481-416E-A979-E43426F1CA02}.Release|x86.ActiveCfg = Release|Win32
 		{25D97576-9481-416E-A979-E43426F1CA02}.Release|x86.Build.0 = Release|Win32
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Debug|x64.ActiveCfg = Debug|x64
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Debug|x64.Build.0 = Debug|x64
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Debug|x86.Build.0 = Debug|Win32
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Release|x64.ActiveCfg = Release|x64
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Release|x64.Build.0 = Release|x64
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Release|x86.ActiveCfg = Release|Win32
+		{84195649-6DB7-4AA2-81ED-9B3454DAB1F0}.Release|x86.Build.0 = Release|Win32
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Debug|x64.ActiveCfg = Debug|x64
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Debug|x64.Build.0 = Debug|x64
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Debug|x86.ActiveCfg = Debug|Win32
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Debug|x86.Build.0 = Debug|Win32
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Release|x64.ActiveCfg = Release|x64
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Release|x64.Build.0 = Release|x64
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Release|x86.ActiveCfg = Release|Win32
+		{65139D6D-A602-492D-859D-54DE264F04F9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
